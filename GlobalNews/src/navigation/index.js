@@ -41,11 +41,11 @@ export default function AppNavigation() {
               <Ionicons
               name={iconName}
               size={customizeSize}
-              color={focused ? 'green' : 'gray'}
+              color={focused ? '#AD0000' : 'gray'}
               />
             )
           },
-          tabBarActiveTintColor: 'green',
+          tabBarActiveTintColor: '#AD0000',
           tabBarInactiveTintColor: 'gray',
           tabBarLabelStyle: {
             fontSize: 12,
@@ -68,7 +68,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='SplashS'
+        initialRouteName='HomeTabs'
         screenOptions={{
             headerShown:false,
             animation: "slide_from_right"
