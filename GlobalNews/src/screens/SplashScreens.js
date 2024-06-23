@@ -22,7 +22,7 @@ export default function SplashScreens() {
           await SplashScreen.hideAsync();
           setTimeout(() => {
             navigation.navigate("Welcome");
-          }, 5000);
+          }, 6000);
         }
       }, [fontsLoaded]);
 
@@ -37,28 +37,9 @@ export default function SplashScreens() {
 
     return (
         <ImageBackground
-            source={require("../../assets/images/reporter.jpg")}
+            source={require("../../assets/splash.png")}
             className="justify-center items-center flex-1"
         >
-            <LinearGradient
-            colors= {["rgba(160, 0, 0, 0.70))", "rgba(173,0,0,0.95)"]}
-            style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-            }}
-            
-            start={{ x: 0, y: 0.5 }}
-            end={{ x: 0, y: 1 }}
-            />
-            <View onLayout={onLayoutRootView}>
-                <Text className="text-white text-3xl font-extrabold uppercase text-center">
-                    Global News App
-                </Text>
-                <Text className="text-white text-lg font-bold text-center pt-3 max-w-[80%]">
-                    Vasileios Bellos {"\n"}  Final Project Coding Factory
-                </Text>
-            </View>
         </ImageBackground>
     );
 };
