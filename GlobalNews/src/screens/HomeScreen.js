@@ -1,52 +1,39 @@
-import { View, Text, useColorScheme } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import React from 'react'
 import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
 import { fetchBreakingNews } from '../../utils/NewsApi';
 import { fetchRecommendedNews } from '../../utils/NewsApi';
+import { useColorScheme } from 'nativewind';
 
 export default function HomeScreen() {
-  const [colorScheme, toggleColorScheme] = useColorScheme();
-  const [breakingNews, setBreakingNews] = useState([])
-  const [recommendedMews, setRecommendedNews] = useState([])
+  const { colorScheme, toggleColorScheme } = useColorScheme();
 
 
   //Fetching Breaking News
-
-  const {isLoading: isBreakingNewsLoading} = useQuery ({
-    queryKey: ["breakingNews"],
+  const { data, isLoading: isBreakingLoading } = useQuery({
+    queryKey: ["breakingNewss"],
     queryFn: fetchBreakingNews,
-    onSuccess: (data) => {
-      setBreakingNews(data.articles)
-    },
-    onError: (error) => {
-      console.log("Error fetching breaking news", error)
-    },
   });
 
-
-
-
   //Fetching Recommended news
-
-  const {isLoading: isRecommendedNewsLoading} = useQuery ({
+  const { data: recommendedNew, isLoading: isRecommendedLoading } = useQuery({
     queryKey: ["recommendedNews"],
     queryFn: fetchRecommendedNews,
-    onSuccess: (data) => {
-      setRecommendedNews(data.articles)
-    },
-    onError: (error) => {
-      console.log("Error fetching recommended news", error)
-    },
   });
 
   return (
-    <SafeAreaView>
+    <SafeAreaView className=" flex-1 bg-white dark:bg-neutral-900">
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-      <Header />
+      
+      <View>
+        <Header />
+
+
+      </View>
+      
     </SafeAreaView>
   )
 }

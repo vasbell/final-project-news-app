@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { useColorScheme } from 'react-native'
+import { useColorScheme } from 'nativewind'
 import HomeScreen from "../screens/HomeScreen"
 import DiscoverScreen from "../screens/DiscoverScreen"
 import SavedScreen from "../screens/SavedScreen"
@@ -13,11 +13,12 @@ import NewsDetailsScreen from "../screens/NewsDetailsScreen"
 import { Ionicons } from '@expo/vector-icons'
 
 
+
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigation() {
-  const {colorScheme, toggleColorScheme} = useColorScheme();
+  const { colorScheme, toggleColorScheme } = useColorScheme();
   const TabNavigator = () => {
     return (
       <Tab.Navigator
@@ -48,8 +49,8 @@ export default function AppNavigation() {
           tabBarActiveTintColor: '#AD0000',
           tabBarInactiveTintColor: 'gray',
           tabBarLabelStyle: {
-            fontSize: 12,
-            fontFamily: "RobotoBold",
+            fontSize: 13,
+            fontFamily: "Roboto",
           },
           tabBarStyle: {
             backgroundColor: colorScheme === 'dark' ? 'black' : 'white',

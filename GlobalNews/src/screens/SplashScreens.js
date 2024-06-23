@@ -10,10 +10,10 @@ export default function SplashScreens() {
     const navigation = useNavigation();
 
     const [fontsLoaded] = useFonts({
-        Roboto: require("../fonts/Roboto-Regular.ttf"),
-        RobotoBold: require('../fonts/Roboto-Bold.ttf'),
-        RobotoBlack: require('../fonts/Roboto-Black.ttf'),
-        RobotoLight: require('../fonts/Roboto-Light.ttf'),  
+        Roboto: require("../../assets/fonts/Roboto-Regular.ttf"),
+        RobotoBold: require('../../assets/fonts/Roboto-Bold.ttf'),
+        RobotoBlack: require('../../assets/fonts/Roboto-Black.ttf'),
+        RobotoLight: require('../../assets/fonts/Roboto-Light.ttf'),  
     
     });
 
