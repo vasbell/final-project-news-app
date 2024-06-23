@@ -41,7 +41,7 @@ export default function SplashScreens() {
             className="justify-center items-center flex-1"
         >
             <LinearGradient
-            colors= {["rgba(0,85,0,0.95)", "rgba(0,40,0,0.95)"]}
+            colors= {["rgba(160, 0, 0, 0.70))", "rgba(173,0,0,0.95)"]}
             style={{
                 position: "absolute",
                 width: "100%",
@@ -55,8 +55,8 @@ export default function SplashScreens() {
                 <Text className="text-white text-3xl font-extrabold uppercase text-center">
                     Global News App
                 </Text>
-                <Text className="text-white text-base font-regular text-center pt-3">
-                    Vasileios Bellos - Final Project Coding Factory
+                <Text className="text-white text-lg font-bold text-center pt-3 max-w-[80%]">
+                    Vasileios Bellos {"\n"}  Final Project Coding Factory
                 </Text>
             </View>
         </ImageBackground>

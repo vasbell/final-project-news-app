@@ -70,7 +70,8 @@ export default function AppNavigation() {
       <Stack.Navigator
         initialRouteName='SplashS'
         screenOptions={{
-          headerShown:false
+            headerShown:false,
+            animation: "slide_from_right"
         }}>
         
         <Stack.Screen name="SplashS" component={SplashScreens} />
