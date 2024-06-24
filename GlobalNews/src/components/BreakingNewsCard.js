@@ -1,5 +1,6 @@
 import { View, Text, TouchableWithoutFeedback, Image, Dimensions } from 'react-native';
 import React from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
 
 var { width, height } = Dimensions.get("window");
 
@@ -21,10 +22,25 @@ export default function BreakingNewsCard({ item, handleClick }) {
             height: height * 0.22,
           }}
           resizeMode="cover"
-          className="rounded-3xl"
+          className="rounded-2xl"
+        />
+        <LinearGradient
+          colors={['transparent', 'rgba(0, 0, 0, 1)']}
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: '50%',
+            borderBottomLeftRadius: 15,
+            borderBottomRightRadius: 15,
+          }}
         />
         <View style={{ position: 'absolute', bottom: 10, left: 10 }}>
-          <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', textShadowColor: 'black', textShadowRadius: 10 }}>{item.title}</Text>
+          <Text
+          className="drop-shadow-xl truncate"
+          style={{ color: 'white', fontSize: 14, fontWeight: 'bold', maxWidth: '95%'}}>{item.title}
+          </Text>
         </View>
       </View>
     </TouchableWithoutFeedback>

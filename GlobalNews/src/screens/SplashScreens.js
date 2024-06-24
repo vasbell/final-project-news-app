@@ -3,7 +3,6 @@ import { View, Text, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
-import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function SplashScreens() {
