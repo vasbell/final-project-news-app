@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -9,10 +10,11 @@ import SavedScreen from "../screens/SavedScreen"
 import SearchScreen from "../screens/SearchScreen"
 import SplashScreens from "../screens/SplashScreens"
 import WelcomeScreen from "../screens/WelcomeScreen"
-import NewsDetailsScreen from "../screens/NewsDetailsScreen"
+import NewsDetails from "../screens/NewsDetails"
 import { Ionicons } from '@expo/vector-icons'
 
 
+const android = Platform.OS === "android";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -72,15 +74,15 @@ export default function AppNavigation() {
         initialRouteName='HomeTabs'
         screenOptions={{
             headerShown:false,
-            animation: "slide_from_right"
+            // animation: "slide_from_right"
         }}>
         
         <Stack.Screen name="SplashS" component={SplashScreens} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen
-          name="Newsdetails"
-          component={NewsDetailsScreen}
+          name="NewsDetails"
+          component={NewsDetails}
           options={{animation: "slide_from_bottom"}}
         />
 
