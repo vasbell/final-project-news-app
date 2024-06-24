@@ -7,21 +7,38 @@ import Header from '../components/Header';
 import { fetchBreakingNews } from '../../utils/NewsApi';
 import { fetchRecommendedNews } from '../../utils/NewsApi';
 import { useColorScheme } from 'nativewind';
+import { useState } from 'react';
+import Loading from '../components/Loading';
+import MiniHeader from '../components/MiniHeader';
 
 export default function HomeScreen() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
-
+  const [breakingNews, setBreakingNews] = useState([]);
+  const [recommendedNews, setRecommendedNews] = useState([]);
 
   //Fetching Breaking News
-  const { data, isLoading: isBreakingLoading } = useQuery({
-    queryKey: ["breakingNewss"],
+  const { isLoading: isBreakingLoading } = useQuery({
+    queryKey: ["breakingNews"],
     queryFn: fetchBreakingNews,
+    onSuccess: (data) => {
+      setBreakingNews(data.articles);
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+    
   });
 
   //Fetching Recommended news
   const { data: recommendedNew, isLoading: isRecommendedLoading } = useQuery({
     queryKey: ["recommendedNews"],
     queryFn: fetchRecommendedNews,
+    onSuccess: (data) => {
+      setRecommendedNews(data.articles);
+    },
+    onError: (error) => {
+      console.log(error);
+    },
   });
 
   return (
@@ -31,6 +48,14 @@ export default function HomeScreen() {
       <View>
         <Header />
 
+        {
+        isBreakingLoading ? (
+          <Loading />
+        ) : (
+          <View>
+            <MiniHeader label="Breaking News"/>
+          </View>
+        )}
 
       </View>
       

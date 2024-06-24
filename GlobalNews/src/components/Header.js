@@ -12,10 +12,11 @@ export default function Header() {
   return (
     <View className="flex-row justify-between items-center mx-4 mt-4">
       <View>
-        <Text className="text-3xl text-red-800 dark:text-white"
+        <Text className="text-3xl"
         style={{
             fontFamily: "Roboto",
-            fontWeight: '700'
+            fontWeight: '800',
+            color: 'rgba(179, 179, 179, 1)'
         }}>
             NEWS
         </Text>
