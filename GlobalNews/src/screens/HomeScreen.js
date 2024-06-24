@@ -11,6 +11,7 @@ import Loading from '../components/Loading';
 import MiniHeader from '../components/MiniHeader';
 import BreakingNews from '../components/BreakingNews';
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
+import NewsSection from '../components/NewsSection';
 
 export default function HomeScreen() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
@@ -24,10 +25,10 @@ export default function HomeScreen() {
   });
 
   // Recommended News
-  // const { data: recommendedNews, isLoading: isRecommendedLoading } = useQuery({
-  //   queryKey: ["recommededNewss"],
-  //   queryFn: fetchRecommendedNews,
-  // });
+  const { data: recommendedNews, isLoading: isRecommendedLoading } = useQuery({
+    queryKey: ["recommededNewss"],
+    queryFn: fetchRecommendedNews,
+  });
 
   return (
     <SafeAreaView className=" flex-1 bg-white dark:bg-neutral-900">
@@ -47,23 +48,23 @@ export default function HomeScreen() {
         )}
 
       {/* Recommended News */}
-      {/* <View>
+      <View>
           <MiniHeader label="Recommended" />
           <ScrollView
             contentContainerStyle={{
               paddingBottom: hp(80),
             }}
-          > */}
-            {/* {isRecommendedLoading ? (
+          >
+            {isRecommendedLoading ? (
               <Loading />
             ) : (
               <NewsSection
                 label="Recommendation"
-                newsProps={recommendedNew.articles}
+                newsProps={recommendedNews.articles}
               />
-            )} */}
-          {/* </ScrollView> */}
-        {/* </View> */}
+            )}
+          </ScrollView>
+        </View>
       </View>
     </SafeAreaView>
   );

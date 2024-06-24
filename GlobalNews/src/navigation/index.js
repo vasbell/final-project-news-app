@@ -14,7 +14,7 @@ import NewsDetails from "../screens/NewsDetails"
 import { Ionicons } from '@expo/vector-icons'
 
 
-const android = Platform.OS === "android";
+// const android = Platform.OS === "android";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -71,7 +71,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='HomeTabs'
+        initialRouteName='SplashS'
         screenOptions={{
             headerShown:false,
             // animation: "slide_from_right"

@@ -2,7 +2,7 @@ import { View, Text, TouchableWithoutFeedback, Image, Dimensions } from 'react-n
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
-var { width, height } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
 
 
 export default function BreakingNewsCard({ item, handleClick }) {
@@ -13,8 +13,7 @@ export default function BreakingNewsCard({ item, handleClick }) {
       <View className="relative">
       <Image
           source={{
-            uri: item.urlToImage
-            ||
+            uri: item.urlToImage ||
               "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
           }}
           style={{
@@ -36,11 +35,20 @@ export default function BreakingNewsCard({ item, handleClick }) {
             borderBottomRightRadius: 15,
           }}
         />
-        <View style={{ position: 'absolute', bottom: 10, left: 10 }}>
-          <Text
-          className="drop-shadow-xl truncate"
-          style={{ color: 'white', fontSize: 14, fontWeight: 'bold', maxWidth: '95%'}}>{item.title}
-          </Text>
+        <View className="absolute bottom-3 left-4 justify-end h-[90%]">
+            <View className="space-y-1">
+                <View className="max-w-[98%]">
+                    <Text className="text-white text-md font-semibold">
+                        {item.title.length > 60 ? item.title.slice(0, 70) + '...' : item.title.split(' - ')[0] || "N/A"}
+                    </Text>
+                </View>
+
+                <View>
+                    <Text  className="text-[#f35449] text-sm font-medium">
+                        {item?.author?.length > 20 ? item.author?.slice(0, 20) + '...' : item?.author}
+                    </Text>
+                </View>
+            </View>
         </View>
       </View>
     </TouchableWithoutFeedback>
