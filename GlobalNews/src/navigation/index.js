@@ -14,7 +14,6 @@ import NewsDetails from "../screens/NewsDetails"
 import { Ionicons } from '@expo/vector-icons'
 
 
-// const android = Platform.OS === "android";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -53,9 +52,11 @@ export default function AppNavigation() {
           tabBarLabelStyle: {
             fontSize: 13,
             fontFamily: "Roboto",
+            paddingBottom: Platform.OS === 'android' ? 5 : 0,
           },
           tabBarStyle: {
             backgroundColor: colorScheme === 'dark' ? 'black' : 'white',
+            
           }
         })}
       >

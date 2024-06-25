@@ -45,7 +45,7 @@ export default function DiscoverScreen() {
       <View>
         <View className="px-4 mb-6 justify-between">
           <Text
-            className="text-3xl text-red-800 dark:text-white"
+            className="text-3xl text-red-700 dark:text-white"
             style={{
               fontFamily: 'Roboto',
               fontWeight: '800',
