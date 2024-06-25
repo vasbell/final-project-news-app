@@ -1,4 +1,4 @@
-import { View, Text, Switch, TouchableOpacity } from 'react-native'
+import { View, Text, Switch, TouchableOpacity, Platform } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { useColorScheme } from 'nativewind'; 
@@ -22,8 +22,14 @@ export default function Header() {
         </Text>
       </View>
 
-      <View className="flex-row space-x-4 rounded-full justify-center items-center">
-        <Switch value={colorScheme == 'dark'} onChange={toggleColorScheme} /> 
+      <View className="flex-row space-x-6 rounded-full justify-center items-center">
+        <Switch
+          style={{
+            transform: Platform.OS === 'android' ? [{ scale: 1.5 }] : []
+          }}
+          value={colorScheme === 'dark'} onValueChange={toggleColorScheme}
+          trackColor={{ false: '#d6d2d9', true: '#AD0000' }}
+          thumbColor={colorScheme === 'dark' ? '#ff8789' : '#f4f3f4'}/> 
         <TouchableOpacity
             onPress={() => navigation.navigate('Search')}
             className="bg-gray-300 dark:bg-white rounded-full p-2">
