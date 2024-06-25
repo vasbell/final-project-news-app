@@ -38,7 +38,7 @@ export default function DiscoverScreen() {
   };
 
   return (
-    <SafeAreaView className="pt-8 flex-1 bg-white dark:bg-neutral-900">
+    <SafeAreaView className="pt-4 flex-1 bg-white dark:bg-neutral-900">
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
 
       {/* Headbar */}
@@ -100,14 +100,6 @@ export default function DiscoverScreen() {
             Discover
           </Text>
 
-          <Text
-            className="text-base text-red-800 dark:text-neutral-300"
-            style={{
-              fontFamily: 'Roboto',
-            }}
-          >
-            View all
-          </Text>
         </View>
         {isDiscoverLoading ? (
           <View className="justify-center items-center">
