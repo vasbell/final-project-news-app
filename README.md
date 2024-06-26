@@ -21,24 +21,29 @@ Dependencies: See package.json for a list of all libraries used, including navig
 Install Node.js and npm:
 Ensure you have Node.js and npm installed on your machine. You can download them from [Node.js](https://nodejs.org/en) official website.
 
+<br />
 
 Install project dependencies defined in package.json by running:
 #### `npm install`
 
+<br />
 
 Be sure that you have this version
 #### `npm install react-native-snap-carousel@4.0.0-beta.6`
 
+<br />
 
 Start for Android:
 To launch the app on an Android emulator or device, use:
 #### `npm run android`
 
+<br />
 
 Start for iOS:
 For running the app on an iOS simulator or device, use:
 #### `npm run ios`
 
+<br />
 
 Open it in the [Expo app](https://expo.io) on your device to use it.
 
