@@ -11,7 +11,9 @@ Key Features:
 
 ## Development Environment
 React Native Version: 0.74.2
+
 Expo Version: ~51.0.14
+
 Dependencies: See package.json for a list of all libraries used, including navigation, state management, and UI components.
 
 
