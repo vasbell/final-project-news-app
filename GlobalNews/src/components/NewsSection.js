@@ -144,12 +144,7 @@ export default function NewsSection( {newsProps}) {
                             <Feather name="bookmark" size={24} color={bookmarkStatus[index] ? "#AD0000" : "grey"} />
                         </TouchableOpacity>
                     </View>
-
                 </View>
-
-                
-
-
             </TouchableOpacity>
         )
     }
