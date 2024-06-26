@@ -72,7 +72,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName='Discover'
+        initialRouteName="SplashsS"
         screenOptions={{
             headerShown:false,
             // animation: "slide_from_right"
