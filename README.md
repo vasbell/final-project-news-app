@@ -1,5 +1,9 @@
 
 # Global News App
+
+![Image](http://bbgroup.gr/wp-content/uploads/2024/06/globalnews-cover-github-xl-scaled.jpg)
+
+
 Welcome to the Global News app, your gateway to staying informed with the latest global news conveniently on your mobile device. Users can browse, read, and bookmark their favorite articles for future reference using this intuitive application. Powered by a News API, the app fetches real-time news data, ensuring you are always up-to-date with current events worldwide.
 
 Key Features:
@@ -16,12 +20,12 @@ Expo Version: ~51.0.14
 
 Dependencies: See package.json for a list of all libraries used, including navigation, state management, and UI components.
 
-
+<br />
 
 ## Get Started
 
 Install Node.js and npm:
-Ensure you have Node.js and npm installed on your machine. You can download them from [Node.js](https://nodejs.org/en) official website.
+You can download them from [Node.js](https://nodejs.org/en) official website.
 
 <br />
 

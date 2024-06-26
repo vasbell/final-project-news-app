@@ -13,16 +13,6 @@ export default function MiniHeader({ label }) {
       >
         {label}
       </Text>
-
-      <Text
-        className="text-base text-gray-900 dark:text-neutral-300 "
-        style={{
-          fontFamily: "Roboto",
-          fontWeight: "semibold",
-        }}
-      >
-        View all
-      </Text>
     </View>
   );
 }
