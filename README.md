@@ -34,7 +34,7 @@ Install project dependencies defined in package.json by running:
 
 <br />
 
-Be sure that you have this version
+Be sure that you have this version of carousel
 #### `npm install react-native-snap-carousel@4.0.0-beta.6`
 
 <br />
