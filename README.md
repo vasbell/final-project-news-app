@@ -9,31 +9,38 @@ Key Features:
 4. Available on both Android and iOS platforms.
 
 
-Development Environment
+## Development Environment
 React Native Version: 0.74.2
 Expo Version: ~51.0.14
 Dependencies: See package.json for a list of all libraries used, including navigation, state management, and UI components.
-Be sure for react-native-snap-carousel to install this version >>  npm install react-native-snap-carousel@4.0.0-beta.6
+
+
 
 ## Get Started
 
-1. Install Node.js and npm:
-Ensure you have Node.js and npm installed on your machine. You can download them from Node.js official website.
+Install Node.js and npm:
+Ensure you have Node.js and npm installed on your machine. You can download them from [Node.js](https://nodejs.org/en) official website.
 
-2. Install project dependencies defined in package.json by running:
+
+Install project dependencies defined in package.json by running:
 ### `npm start`
 
-3. Be sure that you have this version >> `npm install react-native-snap-carousel@4.0.0-beta.6`
 
-4. Start for Android:
+Be sure that you have this version
+### `npm install react-native-snap-carousel@4.0.0-beta.6`
+
+
+Start for Android:
 To launch the app on an Android emulator or device, use:
 #### `npm run android`
 
-5. Start for iOS:
+
+Start for iOS:
 For running the app on an iOS simulator or device, use:
 #### `npm run ios`
 
-6. Open it in the [Expo app](https://expo.io) on your device to use it.
+
+Open it in the [Expo app](https://expo.io) on your device to use it.
 
 
 <br />
