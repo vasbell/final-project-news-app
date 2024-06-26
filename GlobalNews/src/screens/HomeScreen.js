@@ -4,8 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
-import { fetchBreakingNews } from '../../utils/NewsApi';
-import { fetchRecommendedNews } from '../../utils/NewsApi';
+import { fetchBreakingNews, fetchRecommendedNews } from '../../utils/NewsApi';
 import { useColorScheme } from 'nativewind';
 import Loading from '../components/Loading';
 import MiniHeader from '../components/MiniHeader';
@@ -14,9 +13,7 @@ import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 import NewsSection from '../components/NewsSection';
 
 export default function HomeScreen() {
-  const { colorScheme, toggleColorScheme } = useColorScheme();
-  // const [breakingNews, setBreakingNews] = useState([]);
-  // const [recommendedNews, setRecommendedNews] = useState([]);
+  const { colorScheme } = useColorScheme();
 
   // Breaking News
   const { data, isLoading: isBreakingLoading } = useQuery({
@@ -47,8 +44,8 @@ export default function HomeScreen() {
           </View>
         )}
 
-      {/* Recommended News */}
-      <View>
+        {/* Recommended News */}
+        <View>
           <MiniHeader label="Recommended" />
           <ScrollView
             contentContainerStyle={{
