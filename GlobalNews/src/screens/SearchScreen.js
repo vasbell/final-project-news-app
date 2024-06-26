@@ -36,7 +36,7 @@ export default function SearchScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-neutral-900">
-      <View className="mx-4 mb-3 mt-5 justify-between flex-row p-2 items-center bg-neutral-100 rounded-lg">
+      <View className="mx-4 mb-3 mt-12 justify-between flex-row p-2 items-center bg-neutral-100 rounded-lg">
         <TextInput
           onChangeText={handleTextDebounce}
           placeholder='Search for news'

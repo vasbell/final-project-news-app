@@ -12,6 +12,7 @@ import SplashScreens from "../screens/SplashScreens"
 import WelcomeScreen from "../screens/WelcomeScreen"
 import NewsDetails from "../screens/NewsDetails"
 import { Ionicons } from '@expo/vector-icons'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 
@@ -31,19 +32,20 @@ export default function AppNavigation() {
             if(route.name === 'Home') {
               iconName = 'home';
             } else if(route.name === 'Discover') {
-              iconName = 'compass-outline'
+              iconName = 'telescope'
             } else if(route.name === 'Saved') {
-              iconName = 'bookmark-outline'
+              iconName = 'bookmark'
             } else if(route.name === 'Search') {
-              iconName = 'search'
+              iconName = 'magnify'
             }
 
             const customizeSize = 25
             return (
-              <Ionicons
+              <MaterialCommunityIcons
               name={iconName}
               size={customizeSize}
               color={focused ? '#AD0000' : 'gray'}
+              style={{paddingTop: Platform.OS === 'android' ? 1 : 0}}
               />
             )
           },
@@ -74,8 +76,7 @@ export default function AppNavigation() {
       <Stack.Navigator
         initialRouteName="SplashsS"
         screenOptions={{
-            headerShown:false,
-            // animation: "slide_from_right"
+            headerShown:false
         }}>
         
         <Stack.Screen name="SplashS" component={SplashScreens} />
