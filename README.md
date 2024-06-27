@@ -4,6 +4,12 @@
 ![globalnews-cover-github-xl1](https://github.com/vasbell/final-project-news-app/assets/149412681/e97f3e6c-7d14-448e-8216-c7b555886435)
 
 
+## Demo Video
+
+https://github.com/vasbell/final-project-news-app/assets/149412681/209f02a8-3107-4957-b1b7-390520eb21fb
+
+
+
 Welcome to the Global News app, your gateway to staying informed with the latest global news conveniently on your mobile device. Users can browse, read, and bookmark their favorite articles for future reference using this intuitive application. Powered by a News API, the app fetches real-time news data, ensuring you are always up-to-date with current events worldwide.
 
 Key Features:
