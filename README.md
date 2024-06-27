@@ -1,7 +1,7 @@
 
 # Global News App
 
-![Image](http://bbgroup.gr/wp-content/uploads/2024/06/globalnews-cover-github-xl-scaled.jpg)
+![Image](http://bbgroup.gr/wp-content/uploads/2024/06/globalnews-cover-github-xl1-scaled.jpg)
 
 
 Welcome to the Global News app, your gateway to staying informed with the latest global news conveniently on your mobile device. Users can browse, read, and bookmark their favorite articles for future reference using this intuitive application. Powered by a News API, the app fetches real-time news data, ensuring you are always up-to-date with current events worldwide.
@@ -51,7 +51,7 @@ For running the app on an iOS simulator or device, use:
 
 <br />
 
-Open it in the [Expo app](https://expo.io) on your device to use it.
+Open it in the [Expo app](https://expo.io) on your device to use it. (RECOMMENDED)
 
 
 <br />
